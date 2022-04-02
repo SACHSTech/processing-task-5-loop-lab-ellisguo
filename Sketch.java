@@ -71,28 +71,37 @@ public class Sketch extends PApplet {
    * draws the bottom left section
    */
   public void draw_section1(){
-    int intX = 0;
-    int intY = 0;
 
-    for(int intRow = 0; intRow < 30; intRow++){
-      for(int intColumn = 0; intColumn < 30; intColumn++){
-        intX = 3 + 0;  //Instead of zero, calculate the proper intX location using 'intRow'
-        intY = 300 + 3 + 0; //Instead of zero, calculate the proper intY location using 'intColumn'
-
-        fill(255);
-        noStroke();
-        rect(intX, intY, 5, 5);
-
-      }
+  for (int oneX = 3; oneX <= 297; oneX += 10) {
+    for (int oneY = 303; oneY <= 597; oneY += 10) {
+      fill(255);
+      noStroke();
+      rect(oneX, oneY, 5, 5);
     }
   }
-
+}
+  
   /**
    * Use the modulus operator and an if statement to select the color
    * Don't loop from 30 to 60 to shift everything over, just add 300 to x.
    */
   public void draw_section2(){
+     
+    for (int twoX = 303; twoX <= 587; twoX += 20) {
+      for (int twoY = 303; twoY <= 597; twoY += 10) {
+      fill(255);
+      noStroke();
+      rect(twoX, twoY, 5, 5);
+      }
+    }
 
+    for (int tworX = 313; tworX <= 597; tworX += 20) {
+      for (int tworY = 303; tworY <= 597; tworY += 10) {
+      fill(0);
+      noStroke();
+      rect(tworX, tworY, 5, 5);
+      }
+    }
   }
 
   /**
@@ -100,14 +109,46 @@ public class Sketch extends PApplet {
    * Don't use multiple 'if' statements.
    */
   public void draw_section3(){
+    
+    for (int thX = 603; thX <= 897; thX += 10) {
+      for (int thY = 313; thY <= 597; thY += 20) {
+      fill(255);
+      noStroke();
+      rect(thX, thY, 5, 5);
+      }
+    }
 
+    for (int thtX = 603; thtX <= 897; thtX += 10) {
+      for (int thtY = 303; thtY <= 587; thtY += 20) {
+      fill(0);
+      noStroke();
+      rect(thtX, thtY, 5, 5);
+      }
+    }
   }
 
   /**
    * Use the modulus operator and just one 'if' statement to select the color.
    */
   public void draw_section4(){
+    
+    for (int oneX = 903; oneX <= 1197; oneX += 10) {
+      for (int oneY = 303; oneY <= 597; oneY += 10) {
+      fill(0);
+      noStroke();
+      rect(oneX, oneY, 5, 5);
+      }
+    }
 
+    for (int onerX = 903; onerX <= 1197; onerX += 20) {
+      for (int onerY = 313; onerY <= 597; onerY += 20) {
+      fill(255);
+      noStroke();
+      rect(onerX, onerY, 5, 5);
+      }
+    }
+
+    // just figured out you can repeat variable names in different draw sections 
   }
 
   /**
@@ -115,18 +156,61 @@ public class Sketch extends PApplet {
    */
   public void draw_section5(){
 
+    for (int onerX = 3; onerX <= 297; onerX += 10) {
+      for (int onerY = 3; onerY <= 297; onerY += 10) {
+        fill(255);
+        noStroke();
+        rect(onerX, onerY, 5, 5);
+        
+    }
+
+    for (int oneX = 3; oneX <= 297; oneX += 10) {
+      for (int oneY = 3; oneY <= 297 - oneX; oneY += 10) {
+        
+        fill(45, 150, 207);
+        noStroke();
+        rect(oneX, oneY, 5, 5);
+        
+      }
+    }
+  }
   }
 
   public void draw_section6(){
-
+    
+    for (int oneX = 303; oneX <= 597; oneX += 10) {
+      for (int oneY = 3; oneY <= 297; oneY += 10) {
+        if(oneY + 300 >= oneX){
+          fill(255);
+          noStroke();
+          rect(oneX, oneY, 5, 5);
+        }
+      }
+    }
   }
 
   public void draw_section7(){
-
+    for (int oneX = 603; oneX <= 897; oneX += 10) {
+      for (int oneY = 3; oneY <= 297 - oneX + 600; oneY += 10) {
+        
+        fill(255);
+        noStroke();
+        rect(oneX, oneY, 5, 5);
+        
+      }
+    }
   }
   
   public void draw_section8(){
-
+    for (int oneX = 903; oneX <= 1197; oneX += 10) {
+      for (int oneY = 3; oneY <= 297; oneY += 10) {
+        if(oneY + 900 <= oneX){
+          fill(255);
+          noStroke();
+          rect(oneX, oneY, 5, 5);
+        }
+      }
+    }
   }
 
 
